@@ -1,0 +1,29 @@
+#!/bin/bash
+source ./.config
+
+# Create the file with timestamp
+timestamp=$(date -u "+%Y-%m-%dT%H:%M:%SZ")
+new_post_file="./posts/$timestamp.md"
+touch $new_post_file
+
+# Capture first argument (title) and remove from arg list
+title=$1
+shift
+
+# Build tags list:
+# Set Internal Field Separator to Comma so we can join the remaining args
+IFS=,
+join_tags=$*
+
+cat <<- EOF > $new_post_file
+title: "$title"
+tags: $join_tags
+date: $timestamp
+header: "https://d1u0z01nzsqzn7.cloudfront.net/images/buddhaz.jpg" # Replace this with a new image
+----
+
+write content here
+
+EOF
+
+$BUDDHA_EDITOR $new_post_file

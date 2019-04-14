@@ -1,0 +1,51 @@
+{
+  "name": "yourblogname",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "repository": "git@github.com:you/you.github.io.git",
+  "author": "Thats you, dog! <you@example.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server --devtool eval-source-map --history-api-fallback --open",
+    "build": "webpack -p",
+    "post": "./bin/post"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-import-glob": "^2.0.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-import": "^2.17.1",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-standard": "^4.0.0",
+    "express": "^4.15.4",
+    "html-webpack-plugin": "^2.30.1",
+    "node-sass": "^4.5.3",
+    "prettier-eslint": "^8.8.2",
+    "prop-types": "^15.7.2",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.6.0",
+    "webpack-dev-middleware": "^1.12.0",
+    "webpack-dev-server": "^2.8.2"
+  },
+  "dependencies": {
+    "flexboxgrid": "^6.3.1",
+    "immutable": "^3.8.2",
+    "js-yaml": "^3.10.0",
+    "markdown-to-jsx": "^5.4.2",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-highlight": "^0.10.0",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2"
+  }
+}
