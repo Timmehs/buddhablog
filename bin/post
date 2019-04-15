@@ -20,7 +20,8 @@ title: "$title"
 tags: $join_tags
 date: $timestamp
 header: "https://d1u0z01nzsqzn7.cloudfront.net/images/buddhaz.jpg" # Replace this with a new image
-----
+
+----Content Below This Line----
 
 write content here
 

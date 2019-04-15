@@ -12,7 +12,7 @@ test('It converts a post file into an object', t => {
     tags: blogging,framework
     date: 2019-04-14T00:38:29Z
     header: "test-image.jpg"
-    ----
+    ----Content Below This Line----
 
     # Header text
   `
@@ -29,7 +29,7 @@ test('It can handle a blank title', t => {
     tags: blogging,framework
     date: 2019-04-14T00:38:29Z
     header: "test-image.jpg"
-    ----
+    ----Content Below This Line----
 
     # Header text
   `
@@ -43,7 +43,7 @@ test('It can handle blank tags', t => {
     tags:
     date: 2019-04-14T00:38:29Z
     header: "test-image.jpg"
-    ----
+    ----Content Below This Line----
 
     # Header text
   `
