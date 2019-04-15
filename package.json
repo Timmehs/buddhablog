@@ -8,9 +8,16 @@
   "scripts": {
     "start": "webpack-dev-server --devtool eval-source-map --history-api-fallback --open",
     "build": "webpack -p",
-    "post": "./bin/post"
+    "post": "./bin/post",
+    "test": "ava ./tests"
+  },
+  "ava": {
+    "require": [
+      "esm"
+    ]
   },
   "devDependencies": {
+    "ava": "^1.4.1",
     "babel-core": "^6.26.0",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^7.1.2",

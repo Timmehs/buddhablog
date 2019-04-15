@@ -7,6 +7,7 @@ const posts = fromJS(blogPosts)
 const sortedPosts = posts.sortBy(p => {
   return -new Date(p.get('date'))
 })
+
 const Blog = props => {
   return (
     <div>

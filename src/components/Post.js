@@ -21,20 +21,26 @@ class Post extends Component {
     const headerImage = {
       backgroundImage: `url(${post.get('header')})`
     }
+    const postHeader = post.get('title') ? (
+      <header className="left">
+        <h2 className="post-body-title"> {post.get('title')} </h2>
+        <strong className="post-date">{formatDate(post.get('date'))}</strong>
+      </header>
+    ) : (
+      <header className="left">
+        <h2 className="post-body-title">{formatDate(post.get('date'))}</h2>
+      </header>
+    )
     return (
       <article className="post-body">
-        <header className="left">
-          <h2 className="post-body-title"> {post.get('title')} </h2>
-          <strong className="post-date">{formatDate(post.get('date'))}</strong>
-        </header>
-        <p className="post-tags">
-          {post
-            .get('tags')
-            .keySeq()
-            .map(tag => (
+        {postHeader}
+        {post.get('tags') && (
+          <p className="post-tags">
+            {post.get('tags').map(tag => (
               <BlogTag tagName={tag} key={tag} />
             ))}
-        </p>
+          </p>
+        )}
         <div className="post-header-image" style={headerImage} />
         {compiler(post.get('markdown'))}
       </article>
